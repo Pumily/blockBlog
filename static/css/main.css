@@ -533,3 +533,16 @@ article {
 .divRadui {
     border-radius: 8px;
 }
+
+
+/* 文章目录页格式 */
+
+.indexArti {
+    padding-left: 15%;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.indexArti a {
+    color: #000;
+}
