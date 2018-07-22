@@ -48,6 +48,7 @@ button:hover {
 }
 
 .sub-heading {
+    margin-right: 60px;
     margin-top: 40px;
     line-height: 25px;
     font-size: 1em;
