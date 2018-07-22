@@ -9,7 +9,8 @@ $(function() {
         backToTop = $(".back-to-top"),
         aboutThisWeb = $(".about-web"),
         describeThisWeb = $(".describe-web"),
-        toSaySometing = $(".say-someting")
+        toSaySometing = $(".say-someting"),
+        toProjectShow = $(".project-show")
 
     function showBar() {
         mask.fadeIn(); //显示遮罩区
@@ -45,6 +46,12 @@ $(function() {
         }, 800)
     }
 
+    function projectShows() {
+        $('html,body').animate({
+            scrollTop: 2600
+        }, 800)
+    }
+
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > $(window).height())
@@ -61,5 +68,6 @@ $(function() {
     backToTop.on('click', backTop); //返回顶部事件
     aboutThisWeb.on('click', aboutWeb); //点击前往近期动向
     describeThisWeb.on('click', describeWeb); //点击前往网站定位
-    toSaySometing.on('click', saySomething);
+    toSaySometing.on('click', saySomething); //点击前往站长叨叨
+    toProjectShow.on('click', projectShows)
 });

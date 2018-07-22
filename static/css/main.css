@@ -48,7 +48,6 @@ button:hover {
 }
 
 .sub-heading {
-    margin-right: 60px;
     margin-top: 40px;
     line-height: 25px;
     font-size: 1em;
@@ -232,6 +231,10 @@ nav ul li a.active {
 
 
 /*section two*/
+
+.dec-block {
+    margin-right: 60px;
+}
 
 .section-two {
     background-color: rgba(14, 13, 20, 0.9);
