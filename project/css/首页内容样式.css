@@ -1,0 +1,282 @@
+ /*最上方菜单栏*/
+ 
+ .menu {
+     background: rgba(0, 0, 0, 0);
+     width: 100%;
+     height: 60px;
+     position: fixed;
+     z-index: 1000;
+ }
+ 
+ .logo {
+     width: 200px;
+     height: 40px;
+     margin-left: 220px;
+     margin-top: 20px;
+ }
+ 
+ .logo>a {
+     color: white;
+     text-decoration: none;
+     font-size: 22px;
+     font-weight: 400;
+     line-height: 24px;
+     letter-spacing: 4px;
+ }
+ 
+ .menuList {
+     width: 600px;
+     height: 40px;
+     margin-top: -40px;
+     margin-left: 1000px;
+ }
+ 
+ .menuList>a {
+     text-decoration: none;
+     font-weight: 400;
+     line-height: 24px;
+     font-family: 黑体;
+     margin-left: 20px;
+     color: white;
+ }
+ 
+ .xiaLa {
+     background: rgba(0, 0, 0, .8);
+     width: 150px;
+     height: 40px;
+     margin-left: 380px;
+     display: none;
+ }
+ 
+ #xiaLaOne {
+     border-bottom: 1px solid rgba(255, 255, 255, .1);
+ }
+ 
+ .xiaLa>a {
+     text-decoration: none;
+     font-weight: 400;
+     line-height: 40px;
+     font-family: 黑体;
+     color: white;
+     margin-left: 10px;
+ }
+ 
+ .xiaLa>span {
+     color: white;
+     margin-left: 85px;
+ }
+ 
+ .clothStyle {
+     border-bottom: 1px solid rgba(255, 255, 255, .1);
+     border-left: 1px solid rgba(255, 255, 255, .1);
+ }
+ 
+ #clothing {
+     margin-top: -81px;
+     margin-left: 150px;
+ }
+ 
+ .serch {
+     background: white;
+     width: 200px;
+     height: 36px;
+     position: absolute;
+     margin-left: 180PX;
+     border: 4PX solid rgba(0, 0, 0, 1);
+     display: none;
+ }
+ /*轮播中的广告词*/
+ 
+ .ADWord>p {
+     font-size: 50px;
+     text-align: center;
+     letter-spacing: 15px;
+     font-weight: 500;
+     font-family: "Roboto Condensed", sans-serif;
+     color: white;
+ }
+ 
+ .WordSon {
+     text-align: center;
+     font-size: 28px;
+     font-family: STHeiti;
+     letter-spacing: 15px;
+     color: white;
+ }
+ 
+ .BuyCar {
+     text-align: center;
+     letter-spacing: 15px;
+     width: 180px;
+     margin: 0 auto;
+     border: 1px solid white;
+     margin-top: 20px;
+     border-radius: 6px;
+ }
+ 
+ .BuyCar>a {
+     text-decoration: none;
+     font-size: 24px;
+     text-align: center;
+     color: white;
+ }
+ /*详细商品位区域*/
+ 
+ .stealthCar {
+     background: rgba(255, 255, 255, .7);
+     width: 260px;
+     height: 260px;
+     position: absolute;
+     margin-top: -265px;
+     text-align: center;
+     display: none;
+ }
+ 
+ .stealthButtom {
+     background: black;
+     width: 150px;
+     height: 40px;
+     margin: 0 auto;
+     text-align: center;
+     margin-top: 110px;
+     border-radius: 6px;
+ }
+ 
+ .stealthButtom>a {
+     color: white;
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 35px;
+     letter-spacing: 4px;
+     font-family: STHeiti;
+ }
+ 
+ .goodsUnder {
+     text-align: center;
+ }
+ 
+ .goodsUnder>a {
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 25px;
+     letter-spacing: 4px;
+     color: black;
+ }
+ 
+ .goodsUnder>.starLevel {
+     color: orange;
+     font-size: 18px;
+ }
+ 
+ .goodsUnder>p {
+     font-size: 13px;
+ }
+ /*显示所有商品按钮*/
+ 
+ .lookAll {
+     border-radius: 6px;
+ }
+ 
+ .lookAll>a {
+     color: white;
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 35px;
+     letter-spacing: 4px;
+     font-family: STHeiti;
+ }
+ /*长条信念口号*/
+ 
+ .belief>p {
+     font-size: 40px;
+     text-align: center;
+     letter-spacing: 10px;
+     font-weight: 500;
+     font-family: "Roboto Condensed", sans-serif;
+     color: white;
+     padding-top: 130px;
+ }
+ /*已售出的热销产品*/
+ 
+ .goodsSelled {
+     opacity: 0.6;
+ }
+ 
+ .selledUnder {
+     text-align: center;
+ }
+ 
+ .selledUnder>a {
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 25px;
+     letter-spacing: 4px;
+     color: black;
+ }
+ 
+ .selledUnder>.starLevel {
+     color: orange;
+     font-size: 18px;
+ }
+ 
+ .selledUnder>p {
+     font-size: 13px;
+ }
+ /*最下方的选项卡*/
+ 
+ .final {
+     text-align: center;
+ }
+ 
+ .Tab {
+     background: black;
+     width: 150px;
+     color: white;
+     height: 40px;
+     border-radius: 6px;
+     margin: auto auto;
+     float: left;
+     margin-left: 100px;
+ }
+ 
+ .Tab>p {
+     font-family: STHeiti;
+     line-height: 40px;
+     text-align: center;
+ }
+ 
+ .tabOne {
+     text-align: center;
+     margin: auto auto;
+ }
+ 
+ .tabTwo {
+     border: 5px solid black;
+     margin-top: 20px !important;
+     border-radius: 15px;
+     display: none;
+ }
+ 
+ .tabTwo>p {
+     padding: 20px 15px;
+     padding-bottom: 5px !important;
+ }
+ 
+ .tabPhoto {
+     margin-left: 30px;
+     text-align: center;
+     padding-top: 60px;
+ }
+ 
+ .tabThree {
+     text-align: center;
+     display: none;
+ }
+ 
+ .tabThree>p {
+     line-height: 40px;
+ }

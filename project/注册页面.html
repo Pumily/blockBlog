@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/首页框架.css">
+    <script type="text/javascript" src="js/首页框架获取.js"></script>
+    <script type="text/javascript" src="js/首页内容效果.js"></script>
+    <script type="text/javascript" src="js/表单注册页面.js"></script>
+    <link href="css/首页内容样式.css" rel="stylesheet" type="text/css">
+    <link href="css/注册表单样式.css" rel="stylesheet" type="text/css">
+    <link href="css/public.css" rel="stylesheet" type="text/css">
+    <title>注册页面</title>
+</head>
+
+<body>
+    <div id="fullScreen">
+        <div class="menu">
+            <div class="logo">
+                <a href="首页.html">SHOPISLE</a>
+            </div>
+            <div class="menuList">
+                <a href="#" onclick="come();" id="useId">登陆|注册</a>
+                <a href="首页.html">首页</a>
+                <a href="商品信息页.html">个人中心</a>
+                <a href="商品信息页.html">购物车</a>
+                <a href="#" id="findSth">搜索</a>
+                <div class="serch">
+                    <input results="s" type="search" style="width:160px;height:36px;font-size:22px;border:none;" />
+                    <img src="img/F放大镜.jpg" width="25px" height="25px" style="position:absolute;margin-top:5px;margin-left:10px;">
+                </div>
+                <a href="游戏页面.html">游戏</a>
+                <a href="商品信息页.html" onmouseover="menuShow()">商品☟</a>
+                <div class="headeack">
+                    <div class="xiaLa xiaLaFirst" id="xiaLaOne" onmouseover="menuShowNext()">
+                        <a href="商品信息页.html">衣服</a>
+                        <span>☟</span>
+                    </div>
+                    <div class="xiaLa xiaLaFirst">
+                        <a href="商品信息页.html">帽子</a>
+                    </div>
+                    <div id="clothing">
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">外套</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">T恤</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">连衣裙</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="igs">
+            <a class="ig"><img src="img/注册页面大背景.jpg" width="100%" class="screenPhoto" style="filter: brightness(.7);" /></a>
+        </div>
+        <div class="login">
+            <div class="loginBottom">
+                <form class="contact_form" action="商品信息页.html" method="post" name="contact_form" id="loginOne">
+                    <ul>
+                        <li>
+                            <label for="name">用户名:</label>
+                            <input type="text" placeholder="请输入用户名" required pattern="[A-Za-z][0-9]+" />
+                            <span class="form_hint">正确格式为：6~20个字符，可使用字母、数字、下划线，需以字母开头</span>
+                        </li>
+                        <li>
+                            <label for="passwordOne">密码:</label>
+                            <input type="password" name="passwordOne" placeholder="请输入您的密码" required />
+                            <span class="form_hint">密码长度需要在6~24个字符之间</span>
+                        </li>
+                        <li>
+                            <label for="passwordTwo">确认密码:</label>
+                            <input type="password" name="passwordTwo" placeholder="请再输入一遍密码" required/>
+                            <span class="form_hint">密码长度需要在6~24个字符之间</span>
+                        </li>
+                        <li>
+                            <label for="message">个性签名:</label>
+                            <textarea name="message" cols="40" rows="6" placeholder="" required></textarea>
+                        </li>
+                        <li>
+                            <label for="message">所在地:</label>
+                            <select name="atHost" id="home">
+                              <option>华北</option>
+                              <option>华南</option>
+                              <option>西北</option>
+                              <option>西南</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="message">性别:</label>
+                            <p>
+                                <label>
+                                <input type="radio" name="RadioGroup1" value="man" id="RadioGroup1_0" style="width:20px"> 
+                                男</label>
+                                <label>
+                                <input type="radio" name="RadioGroup1" value="woman" id="RadioGroup1_1" style="width:20px">
+                                女</label>
+                                <br>
+                            </p>
+                        </li>
+                        <li>
+                            <label for="message">购物喜好:</label>
+                            <p>
+                                <label>
+                                <input type="checkbox" name="CheckboxGroup1" value="coat" id="CheckboxGroup1_0" style="width:20px">
+                                外衣</label>
+                                <label>
+                                <input type="checkbox" name="CheckboxGroup1" value="T-shirt" id="CheckboxGroup1_1" style="width:20px">
+                                T恤</label>
+                                <label>
+                                <input type="checkbox" name="CheckboxGroup1" value="dress" id="CheckboxGroup1_2" style="width:20px">
+                                连衣裙</label>
+                                <br>
+                            </p>
+                        </li>
+                        <li>
+                            <button class="submit" id="next">下一步</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#igs {
+    width: 100%;
+    position: relative;
+}
+
+.ig {
+    position: absolute;
+    width: 100% !important;
+}
+
+#tabs {
+    position: absolute;
+    list-style: none;
+    left: 48%;
+    bottom: 20px;
+    border-radius: 10px;
+    padding: 5px 0 5px 5px;
+}
+
+.tab {
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+    position: absolute;
+    top: 124px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.btn2 {
+    position: absolute;
+    right: 0px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0);
+}

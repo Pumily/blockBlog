@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/首页框架.css">
+    <script type="text/javascript" src="js/首页框架获取.js"></script>
+    <script type="text/javascript" src="js/lunbo.js"></script>
+    <script type="text/javascript" src="js/首页内容效果.js"></script>
+    <link href="css/lunbo.css" rel="stylesheet" type="text/css">
+    <link href="css/首页内容样式.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/登陆表单验证.js"></script>
+    <script type="text/javascript" src="js/Ajax登陆验证.js"></script>
+    <link href="css/登录表单样式.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<!--网页遮罩层-->
+
+<body onload="creatyzm();">
+    <div id="mask">
+        <div id="login">
+            <div class="loginCon">
+                <div class="loginTop">
+                    <h2 class="loding">登陆</h2>
+                    <div id="close" onclick="go()"><img src="img/clo.png"></div>
+                </div>
+                <form id="form1" method="post" action="商品信息页.html">
+                    <table width="616" border="0" class="win">
+                        <tr>
+                            <td width="69" height="53">用户名：</td>
+                            <td width="186">
+                                <input type="text" name="username" placeholder="请输入用户名或账户" id="username" onblur="checkUserName(this.value); isUserName();" required/></td>
+                            <td width="211"><span id="checkUserNameResult" style="color: red "></span> </td>
+                        </tr>
+                        <tr>
+                            <td height="57">密码：</td>
+                            <td>
+                                <input type="password" name="passkey" id="passkey" placeholder="请输入账号密码" onblur="checkPassword(this.value);passwordlength(this.value);" /></td>
+                            <td><span id="checkPasswordResult" style="color: red "></span></td>
+                        </tr>
+                        <tr>
+                            <td height="57">验证码：</td>
+                            <td>
+                                <input type="text" name="yzmsr" placeholder="请输入验证" id="yzmsr" /></td>
+                            <td><input type="button" name="yzm2" id="yzm2" value="" onclick="creatyzm()" style="margin-left:-120px;" /></td>
+                        </tr>
+                        <tr id="sumb">
+                            <td height="33" colspan="3"><input type="button" name="link" id="link" value="注册" onclick="zhuCe()" style=" margin-left:70px;cursor:pointer" />
+                                <input type="button" name="link2" id="link2" onclick="dl()" value="登陆" style=" margin-left:60px;cursor:pointer" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--最上方的大背景轮播窗-->
+    <div id="fullScreen">
+        <div class="menu">
+            <div class="logo">
+                <a href="首页.html">SHOPISLE</a>
+            </div>
+            <div class="menuList">
+                <a href="#" onclick="come();" id="useId">登陆|注册</a>
+                <a href="首页.html">首页</a>
+                <a href="商品信息页.html">个人中心</a>
+                <a href="商品信息页.html">购物车</a>
+                <a href="#" id="findSth">搜索</a>
+                <div class="serch">
+                    <input results="s" type="search" style="width:160px;height:36px;font-size:22px;border:none;" />
+                    <img src="img/F放大镜.jpg" width="25px" height="25px" style="position:absolute;margin-top:5px;margin-left:10px;">
+                </div>
+                <a href="游戏页面.html">游戏</a>
+                <a href="商品信息页.html" onmouseover="menuShow()">商品☟</a>
+                <div class="headeack">
+                    <div class="xiaLa xiaLaFirst" id="xiaLaOne" onmouseover="menuShowNext()">
+                        <a href="商品信息页.html">衣服</a>
+                        <span>☟</span>
+                    </div>
+                    <div class="xiaLa xiaLaFirst">
+                        <a href="商品信息页.html">帽子</a>
+                    </div>
+                    <div id="clothing">
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">外套</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">T恤</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">连衣裙</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="igs">
+            <a class="ig"><img src="img/sylb1.jpg" width="100%" class="screenPhoto" style="filter: brightness(.7);" /></a>
+            <a class="ig"><img src="img/sylb2.jpg" width="100%" class="screenPhoto" style="filter: brightness(.8);" /></a>
+            <a class="ig"><img src="img/sylb3.jpg" width="100%" class="screenPhoto" style="filter: brightness(.7);" /></a>
+
+            <div class="btn btn1">
+            </div>
+            <div class="btn btn2"></div>
+            <ul id="tabs">
+                <li class="tab"></li>
+                <li class="tab"></li>
+                <li class="tab"></li>
+            </ul>
+        </div>
+        <div class="TheAD">
+            <div class="ADWord">
+                <p>NEW ARRIVAL FOR MAN A MODERN STYLE</p>
+            </div>
+            <div class="WordSon">
+                <p>你的潮流你做主</p>
+            </div>
+            <div class="BuyWay">
+                <div class="BuyCar">
+                    <a href="商品信息页.html">马上抢购</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="underWin">
+        <!--特殊商品打折图-->
+        <div class="discountOne" id="discount">
+            <a href="商品信息页.html" class="discountChange"><img src="img/discount1.jpg" width: '360px';></a>
+        </div>
+        <div class="discountTwo" id="discount">
+            <a href="商品信息页.html" class="discountChange"><img src="img/discount2.jpg" width: '360px';></a>
+        </div>
+        <div class="discountThree" id="discount">
+            <a href="商品信息页.html" class="discountChange"><img src="img/discount3.jpg" width: '360px';></a>
+        </div>
+
+        <!--商品位区域前四个-->
+        <div class="goods" id="goodsOne">
+            <div class="goodsTop" id="topOne">
+                <a href="商品信息页.html"><img src="img/详细商品1.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearOne">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">韩版男士修身长外套</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★☆☆</a><br>
+                <p><s>￥168</s>&nbsp;<u>￥128</u></p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topTwo">
+                <a href="商品信息页.html"><img src="img/详细商品2.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearTwo">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">少女可爱风斑马条纹外套</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p><s>￥198</s>&nbsp;<u>￥110</u></p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topThree">
+                <a href="商品信息页.html"><img src="img/详细商品3.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearThree">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">青年文化T恤</a><br>
+                <a href="商品信息页.html" class="starLevel">★★☆☆☆</a><br>
+                <p>￥35</p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topFour">
+                <a href="商品信息页.html"><img src="img/详细商品4.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearFour">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">粉红情调女生性感T恤</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥85</p>
+            </div>
+        </div>
+
+        <!--商品位区域后四个-->
+        <div class="goods" id="goodsSecond">
+            <div class="goodsTop" id="topFive">
+                <a href="商品信息页.html"><img src="img/详细商品5.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearFive">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">“蓝色多瑙河”主题连衣裙</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥335</p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topSix">
+                <a href="商品信息页.html"><img src="img/详细商品6.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearSix">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">“满天星”主题连衣裙</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥280</p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topSeven">
+                <a href="商品信息页.html"><img src="img/详细商品7.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearSeven">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">飞行员帅气遮帽</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★☆☆</a><br>
+                <p>￥45</p>
+            </div>
+        </div>
+        <div class="goods">
+            <div class="goodsTop" id="topEight">
+                <a href="商品信息页.html"><img src="img/详细商品8.jpg" width="260px" height="260px"></a>
+                <div class="stealthCar" id="appearEight">
+                    <div class="stealthButtom">
+                        <a href="商品信息页.html">￥加入购物车</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsUnder">
+                <a href="商品信息页.html">少女情怀小圆帽</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥28</p>
+            </div>
+        </div>
+
+
+        <!--查看所有商品按钮-->
+        <div class="lookAll">
+            <a href="商品信息页.html">显示所有商品</a>
+        </div>
+
+        <!--长条信念口号-->
+        <div class="belief">
+            <p>BE INSPIRED. GET AHEAD OF TRENDS.</p>
+        </div>
+
+        <!--已经售出的热销产品-->
+        <div class="goodsSelled" id="selledOne">
+            <div class="selledTop">
+                <a href="商品信息页.html"><img src="img/详细商品8.jpg" width="208px" height="208px"></a>
+            </div>
+            <div class="selledUnder">
+                <a href="商品信息页.html">少女情怀小圆帽</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥28</p>
+            </div>
+        </div>
+        <div class="goodsSelled">
+            <div class="selledTop">
+                <a href="商品信息页.html"><img src="img/详细商品6.jpg" width="208px" height="208px"></a>
+            </div>
+            <div class="selledUnder">
+                <a href="商品信息页.html">“满天星”主题连衣裙</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥280</p>
+            </div>
+        </div>
+        <div class="goodsSelled">
+            <div class="selledTop">
+                <a href="商品信息页.html"><img src="img/详细商品2.jpg" width="208px" height="208px"></a>
+            </div>
+            <div class="selledUnder">
+                <a href="商品信息页.html">少女可爱风斑马条纹外套</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p><s>￥198</s>&nbsp;<u>￥110</u></p>
+            </div>
+        </div>
+        <div class="goodsSelled">
+            <div class="selledTop">
+                <a href="商品信息页.html"><img src="img/详细商品4.jpg" width="208px" height="208px"></a>
+            </div>
+            <div class="selledUnder">
+                <a href="商品信息页.html">粉红情调女生性感T恤</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥85</p>
+            </div>
+        </div>
+        <div class="goodsSelled">
+            <div class="selledTop">
+                <a href="商品信息页.html"><img src="img/详细商品5.jpg" width="208px" height="208px"></a>
+            </div>
+            <div class="selledUnder">
+                <a href="商品信息页.html">“蓝色多瑙河”主题连衣裙</a><br>
+                <a href="商品信息页.html" class="starLevel">★★★★★</a><br>
+                <p>￥335</p>
+            </div>
+        </div>
+
+
+        <!--底部销售情况-->
+        <div class="final">
+            <div class="Tab" id="tab1">
+                <p style="cursor:pointer">精品潮流概念视频</p>
+            </div>
+            <div class="Tab" id="tab2">
+                <p style="cursor:pointer">我们的潮流概念</p>
+            </div>
+            <div class="Tab" id="tab3">
+                <p style="cursor:pointer">联系我们</p>
+            </div>
+        </div>
+
+        <!--最后的部分署名图标-->
+        <div class="finalIcon">
+            <div class="tabOne" class="tabDis">
+                <video src="putOut.mp4" width="480" height="340" controls="controls">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="tabTwo" class="tabDis" style="width:700px;margin: auto auto;">
+                <p>潮流，更多的指是街头潮流，一个笼统却很有吸引力的词语。我是一个90后，也是大多数特指幸福的一代，无可否认对于物质上我是幸福的，对于精神上是赤裸的。说到潮流一词，大家很快联想到藤原浩，陈冠希这一类人，毕竟我接触潮流也是因为这样，一大堆的资讯在你网络爆炸，一个个icon作为标准。开始了认LOGO，fragment的闪电牛王，CLOT，VISVIM的Christo~多到数不清，也慢慢的形成一种蝴蝶效应，穿的人越来越多，街上普及的越来越快，又加上fake的速度也相当惊人。这个乱糟糟的形态，该怪谁？
+                    中国，以我们自身来说，不是人人都有钱，潮牌的价格更是烧不起，所以只能买fake。要么就是富二代，想买啥买啥。中国有多少年轻人？年轻人又有多少是真正关注潮流的？中国就是一个“拿来主义”，东学学西学学，只要有”媒体“帮忙标签戴帽就成品了。你说，有多少人会在乎品牌潮不潮？只要你建立一个图标后，几件单品，在各大资讯网站散播一下，就形成了一个”潮牌“？然后网站的编辑美言几句，什么什么风，什么什么品质······消费群体又需要”参照“，所以原创品牌真的很艰辛，找了许多街舞，涂鸦，歌唱等年轻人颇为认识的人来合作，其实更重要的还是朋友帮忙。这也是出了网站宣传之外的一个宣传方法。当然，开实体店也有，但是需要一定勇气的财力。让消费者能接触到实物总好过淘宝看照片。经济不允许的情况可以选择二三线的品牌，价格方面没那么大压力，当然国产品牌也是选择的一种，毕竟要给国内增加信心。
+                </p>
+            </div>
+            <div class="tabThree">
+                <img src="img/QQ二维码.jpg" width="200px" height="200px" class="tabPhoto">
+                <img src="img/微信二维码.jpg" width="200px" height="200px" class="tabPhoto">
+                <img src="img/微博二维码.png" width="200px" height="200px" class="tabPhoto">
+                <p>联系电话：18725353952</p>
+                <p>电子邮箱：1226228680@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

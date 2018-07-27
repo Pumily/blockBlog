@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/首页框架.css">
+    <script type="text/javascript" src="js/首页框架获取.js"></script>
+    <script type="text/javascript" src="js/首页内容效果.js"></script>
+    <script type="text/javascript" src="js/表单注册页面.js"></script>
+    <link href="css/首页内容样式.css" rel="stylesheet" type="text/css">
+    <title>游戏</title>
+</head>
+
+<body>
+    <div id="fullScreen">
+        <div class="menu">
+            <div class="logo">
+                <a href="首页.html">SHOPISLE</a>
+            </div>
+            <div class="menuList">
+                <a href="#" onclick="come();" id="useId">登陆|注册</a>
+                <a href="首页.html">首页</a>
+                <a href="商品信息页.html">个人中心</a>
+                <a href="商品信息页.html">购物车</a>
+                <a href="#" id="findSth">搜索</a>
+                <div class="serch">
+                    <input results="s" type="search" style="width:160px;height:36px;font-size:22px;border:none;" />
+                    <img src="img/F放大镜.jpg" width="25px" height="25px" style="position:absolute;margin-top:5px;margin-left:10px;">
+                </div>
+                <a href="商品信息页.html">游戏</a>
+                <a href="商品信息页.html" onmouseover="menuShow()">商品☟</a>
+                <div class="headeack">
+                    <div class="xiaLa xiaLaFirst" id="xiaLaOne" onmouseover="menuShowNext()">
+                        <a href="商品信息页.html">衣服</a>
+                        <span>☟</span>
+                    </div>
+                    <div class="xiaLa xiaLaFirst">
+                        <a href="商品信息页.html">帽子</a>
+                    </div>
+                    <div id="clothing">
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">外套</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">T恤</a>
+                        </div>
+                        <div class="xiaLa clothStyle">
+                            <a href="商品信息页.html">连衣裙</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="igs">
+            <a class="ig" id="gameMask" style="cursor:pointer"><img src="img/gameStar.gif" width="100%" class="screenPhoto" style="filter: brightness(1);position: absolute;z-index: 1300;" /></a>
+            <a class="ig"><img src="img/GameBig.jpg" width="100%" class="screenPhoto" style="filter: brightness(1);" /></a>
+        </div>
+        <script src="js/game.js"></script>
+    </div>
+</body>
+
+</html>
