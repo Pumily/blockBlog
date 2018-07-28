@@ -62,7 +62,7 @@ button:hover {
 }
 
 .main-wrapper {
-    background: url(../images/banner.jpg);
+    background: url(../images/artiPic02.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +72,7 @@ button:hover {
 @media only screen and (max-width: 500px) {
     .main-wrapper {
         /*background: #9a647e;*/
-        background: url(../images/banner-sm.jpg);
+        background: url(../images/artiPic02.jpg);
         /*background-attachment: fixed;*/
         background-repeat: no-repeat;
         background-attachment: fixed;
